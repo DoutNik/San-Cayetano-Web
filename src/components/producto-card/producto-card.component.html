@@ -1,7 +1,9 @@
-<div *ngFor="let product of products">
-    <h2>{{ product.name }}</h2>
-    <p>Categoría: {{ product.category }}</p>
-    <p>Tamaño: {{ product.size }}</p>
-    <p>Descripción: {{ product.description }}</p>
-    <p>Marca: {{ product.brand }}</p>
+
+  <div class="cardContainer">
+    <div *ngFor="let product of products" class="card">
+      <h2>{{ product.name }}</h2>
+      <h3 class="marca">{{ product.brand }}</h3>
+      <p>Ingredientes: {{ product.description }}</p>
+    </div>
   </div>
+
