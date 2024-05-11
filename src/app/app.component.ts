@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { InicioComponent } from '../components/inicio/inicio.component';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { NavBarComponent } from '../components/nav-bar/nav-bar.component'; 
 
 @Component({
   selector: 'pizzeria-web',
   standalone: true,
-  imports: [RouterOutlet, InicioComponent],
+  imports: [RouterOutlet, NavBarComponent, RouterOutlet, RouterLinkActive, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
