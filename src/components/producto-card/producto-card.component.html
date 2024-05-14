@@ -1,4 +1,11 @@
-
+<div class="title">
+  <h2>Nuestros productos:</h2>
+</div>
+<div class="categories">
+  <button (click)="filterProducts('Pizzas')">Pizzas</button>
+  <button (click)="filterProducts('Bebidas')">Bebidas</button>
+  <button (click)="filterProducts('Lomos y empanadas')">Lomos y empanadas</button>
+</div>
   <div class="cardContainer">
     <div *ngFor="let product of products" class="card">
       <h2>{{ product.name }}</h2>

@@ -13,4 +13,16 @@ import { ProductService } from '../../services/productList/product.service';
 })
 export class ProductoCardComponent {
   @Input() products: Product[] = [];
+  categories: string[] = ['Pizzas', 'Bebidas', 'Lomos y empanadas'];
+  selectedCategory: string = 'Pizzas';
+  filteredProducts: Product[] = [];
+
+  constructor(private productService: ProductService) {
+    this.filterProducts('Pizzas');
+  }
+
+  filterProducts(category: string): void {
+    this.selectedCategory = category;
+    this.filteredProducts = this.productService.getProducts().filter(product => product.category === category);
+  }
 }
