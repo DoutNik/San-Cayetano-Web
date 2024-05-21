@@ -1,0 +1,25 @@
+<div *ngIf="categories.length">
+  <h2>Categories</h2>
+  <ul>
+    <li *ngFor="let category of categories" (click)="onSelectCategory(category)">
+      {{ category.name }}
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="selectedCategory">
+  <h3>{{ selectedCategory.name }} Subcategories</h3>
+  <ul>
+    <li *ngFor="let subcategory of selectedCategory.subcategories" (click)="onSelectSubcategory(subcategory)">
+      {{ subcategory.name }}
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="selectedSubcategory">
+  <h4>Products in {{ selectedSubcategory.name }}</h4>
+  <div *ngFor="let product of products" class="product-card">
+    <h5>{{ product.name }}</h5>
+    <p>{{ product.description }}</p>
+  </div>
+</div>
