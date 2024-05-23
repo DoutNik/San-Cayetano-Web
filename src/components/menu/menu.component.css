@@ -1,3 +1,8 @@
+.categories {
+text-align: center;
+margin-top: 100px;
+}
+
 .cardContainer {
   display: grid;
   max-width: 100%;
@@ -16,8 +21,6 @@
 }
 
 .card h2,
-.card h3,
-.card h4,
 .card p {
   padding: 20px;
   margin: 0;
@@ -34,16 +37,7 @@
   text-overflow: ellipsis;
 }
 
-.card h3 {
-  font-size: 16px;
-  color: rgb(238, 30, 7);
-}
-
 .card p {
-  font-size: 14px;
-}
-
-.card h4 {
   font-size: 14px;
 }
 
