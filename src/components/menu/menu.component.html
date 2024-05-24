@@ -1,36 +1,43 @@
-<div class="cardContainer" *ngIf="showCategories" [@fadeInOut]>
-  <h2>Categories</h2>
+<div class="menu">
+  <div class="categories" *ngIf="showCategories" [@fadeInOut]>
+    <div class="options">
+    <h2>Comida:</h2>
+    <h2>Bebida:</h2>
+  </div>
+    <div class="cardContainer">
+      <div
+        class="categoriesCard"
+        *ngFor="let category of categories"
+        (click)="onSelectCategory(category)"
+      >
+        <h2>{{ category.name }}</h2>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="selectedCategory && showSubcategories" [@fadeInOut]>
+    <h3>{{ selectedCategory.name }} Subcategories</h3>
+    <ul>
+      <li
+        *ngFor="let subcategory of selectedCategory.subcategories"
+        (click)="onSelectSubcategory(subcategory)"
+      >
+        <button>{{ subcategory.name }}</button>
+      </li>
+    </ul>
+    <button (click)="goBackToCategories()">Back to Categories</button>
+  </div>
+
   <div
-    class="card"
-    *ngFor="let category of categories"
-    (click)="onSelectCategory(category)"
+    class="cardContainer"
+    *ngIf="selectedSubcategory && !showSubcategories"
+    [@fadeInOut]
   >
-    <h2>{{ category.name }}</h2>
+    <h4>Products in {{ selectedSubcategory.name }}</h4>
+    <div *ngFor="let product of products" class="card">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+    </div>
+    <button (click)="goBackToSubcategories()">Back to Subcategories</button>
   </div>
-</div>
-
-<div *ngIf="selectedCategory && showSubcategories" [@fadeInOut]>
-  <h3>{{ selectedCategory.name }} Subcategories</h3>
-  <ul>
-    <li
-      *ngFor="let subcategory of selectedCategory.subcategories"
-      (click)="onSelectSubcategory(subcategory)"
-    >
-      <button>{{ subcategory.name }}</button>
-    </li>
-  </ul>
-  <button (click)="goBackToCategories()">Back to Categories</button>
-</div>
-
-<div
-  class="cardContainer"
-  *ngIf="selectedSubcategory && !showSubcategories"
-  [@fadeInOut]
->
-  <h4>Products in {{ selectedSubcategory.name }}</h4>
-  <div *ngFor="let product of products" class="card">
-    <h2>{{ product.name }}</h2>
-    <p>{{ product.description }}</p>
-  </div>
-  <button (click)="goBackToSubcategories()">Back to Subcategories</button>
 </div>
