@@ -3,6 +3,11 @@ export enum ProductSize {
   large = 'grande',
 }
 
+export enum CategoryType {
+  comida = 'Comida',
+  bebida = 'Bebida'
+}
+
 export enum ProductType {
   pizza = 'Pizza',
   sinAlcohol = 'Bebida sin alcohol',
@@ -15,15 +20,17 @@ export enum ProductType {
 export class Product {
   id: number;
   name: string;
-  category: ProductType;
+  category: CategoryType
+  productType: ProductType;
   size: ProductSize;
   description: string;
   brand: string;
 
-  constructor(id: number, name: string, category: ProductType, size: ProductSize, description: string, brand: string) {
+  constructor(id: number, name: string, category: CategoryType, productType: ProductType, size: ProductSize, description: string, brand: string) {
     this.id = id;
     this.name = name;
-    this.category = category;
+    this.category = category
+    this.productType = productType;
     this.size = size;
     this.description = description;
     this.brand = brand;

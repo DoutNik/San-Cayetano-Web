@@ -1,22 +1,31 @@
 .menu {
   margin-top: 100px;
   max-width: 100%;
-}
-
-.options {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
 }
 
 .categories {
+  display: grid;
   text-align: center;
+  grid-template-columns: 1fr;
+  }
+
+.categoriesContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 20px;
+  margin-top: 40px;
 }
+
 
 .categoriesCard {
   justify-self: center;
   background-color: rgba(0, 0, 0, 0.5);
   width: 280px;
-  height: auto;
+  height: 75px;
   box-shadow: 0px 5px 10px grey;
   border-radius: 10px;
 }
@@ -27,12 +36,43 @@
   color: white;
   font-weight: 800;
   font-style: italic;
-}
-
-.categoriesCard h2 {
   font-size: 24px;
   white-space: nowrap;
 }
+
+.subcategories {
+  text-align: center;
+}
+
+.subcategoriesContainer {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 20px;
+  margin-top: 40px;
+}
+
+
+.subcategoriesCard {
+  justify-self: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 280px;
+  height: auto;
+  box-shadow: 0px 5px 10px grey;
+  border-radius: 10px;
+}
+
+.subcategoriesCard h2 {
+  padding: 20px;
+  margin: 0;
+  color: white;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 24px;
+  white-space: nowrap;
+}
+
 
 .cardContainer {
   display: grid;

@@ -1,43 +1,101 @@
 <div class="menu">
-  <div class="categories" *ngIf="showCategories" [@fadeInOut]>
-    <div class="options">
-    <h2>Comida:</h2>
-    <h2>Bebida:</h2>
-  </div>
-    <div class="cardContainer">
+  <div class="categories">
+    <!---------------------------------------COMIDA---------------------------------------->
+    <div class="categoriesContainer" *ngIf="showFoodCategories" [@fadeInOut]>
+      <h2>Comidas:</h2>
       <div
         class="categoriesCard"
-        *ngFor="let category of categories"
-        (click)="onSelectCategory(category)"
+        *ngFor="let category of comidas"
+        (click)="onSelectFoodCategory(category)"
       >
         <h2>{{ category.name }}</h2>
       </div>
     </div>
-  </div>
-
-  <div *ngIf="selectedCategory && showSubcategories" [@fadeInOut]>
-    <h3>{{ selectedCategory.name }} Subcategories</h3>
-    <ul>
-      <li
-        *ngFor="let subcategory of selectedCategory.subcategories"
-        (click)="onSelectSubcategory(subcategory)"
-      >
-        <button>{{ subcategory.name }}</button>
-      </li>
-    </ul>
-    <button (click)="goBackToCategories()">Back to Categories</button>
-  </div>
-
-  <div
-    class="cardContainer"
-    *ngIf="selectedSubcategory && !showSubcategories"
-    [@fadeInOut]
-  >
-    <h4>Products in {{ selectedSubcategory.name }}</h4>
-    <div *ngFor="let product of products" class="card">
-      <h2>{{ product.name }}</h2>
-      <p>{{ product.description }}</p>
+    <!-------------------------------SUBCATEGORIAS DE COMIDA-------------------------------->
+    <div class="subcategories" *ngIf="selectedFoodCategory && showFoodSubcategories"[@fadeInOut]>
+      <h2>{{ selectedFoodCategory.name }}</h2>
+      <div class="subcategoriesContainer">
+        <div
+          class="subcategoriesCard"
+          *ngFor="let subcategory of selectedFoodCategory.subcategories"
+          (click)="onSelectFoodSubcategory(subcategory)"
+        >
+          <h2>{{ subcategory.name }}</h2>
+        </div>
+      </div>
+      <button (click)="goBackToFoodCategories()">Volver a "COMIDAS"</button>
     </div>
-    <button (click)="goBackToSubcategories()">Back to Subcategories</button>
+    <!----------------------------------PRODUCTOS DE COMIDA--------------------------------->
+    <div
+      class="cardContainer"
+      *ngIf="!showFoodSubcategories && showFoodProducts"
+      [@fadeInOut]
+    >
+      <h4>Products in {{ selectedFoodSubcategory?.name || selectedFoodCategory?.name}}</h4>
+      <div *ngFor="let product of foodProducts" class="card">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+      </div>
+      <button *ngIf="!selectedFoodSubcategory && !showFoodSubcategories && showFoodProducts" (click)="goBackToFoodCategories()">
+        Volver a "COMIDAS"
+      </button>
+      <button *ngIf="selectedFoodSubcategory && !showFoodSubcategories && showFoodProducts" (click)="goBackToFoodSubcategories()">
+        Volver a "{{selectedFoodSubcategory.name}}"
+      </button>
+    </div>
+  </div>
+    <!---------------------------------------BEBIDA---------------------------------------->
+  <div class="categories">
+    <div class="categoriesContainer" *ngIf="showDrinkCategories" [@fadeInOut]>
+      <h2>Bebidas:</h2>
+      <div
+        class="categoriesCard"
+        *ngFor="let category of bebidas"
+        (click)="onSelectDrinkCategory(category)"
+      >
+        <h2>{{ category.name }}</h2>
+      </div>
+    </div>
+    <!-------------------------------SUBCATEGORIAS DE BEBIDA-------------------------------->
+
+    <div
+      class="subcategories"
+      *ngIf="selectedDrinkCategory && showDrinkSubcategories"
+      [@fadeInOut]
+    >
+      <h2>{{ selectedDrinkCategory.name }}</h2>
+      <div class="subcategoriesContainer">
+        <div
+          class="subcategoriesCard"
+          *ngFor="let subcategory of selectedDrinkCategory.subcategories"
+          (click)="onSelectDrinkSubcategory(subcategory)"
+        >
+          <h2>{{ subcategory.name }}</h2>
+        </div>
+      </div>
+      <button (click)="goBackToDrinkCategories()">Volver a "BEBIDAS"</button>
+    </div>
+    <!----------------------------------PRODUCTOS DE BEBIDA--------------------------------->
+
+    <div
+      class="cardContainer"
+      *ngIf="!showDrinkSubcategories && showDrinkProducts"
+      [@fadeInOut]
+    >
+      <h4>
+        Products in
+        {{ selectedDrinkSubcategory?.name || selectedDrinkCategory?.name }}
+      </h4>
+      <div *ngFor="let product of drinkProducts" class="card">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+      </div>
+      <button *ngIf="!selectedDrinkSubcategory && !showDrinkSubcategories && showDrinkProducts" (click)="goBackToDrinkCategories()">
+        Volver a "BEBIDAS"
+      </button>
+      <button *ngIf="selectedDrinkSubcategory && !showDrinkSubcategories && showDrinkProducts" (click)="goBackToDrinkSubcategories()">
+        Volver a "{{selectedDrinkCategory?.name}}"
+      </button>
+    </div>
   </div>
 </div>
