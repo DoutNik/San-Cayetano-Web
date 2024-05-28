@@ -147,7 +147,7 @@ export class MenuComponent implements OnInit {
     this.drinkProducts = [];
     this.showDrinkProducts = false;
     setTimeout(() => {
-      this.showDrinkSubcategories = true; // Show subcategories again
+      this.showDrinkSubcategories = true;
     }, 500);
   }
 }

@@ -10,9 +10,10 @@ export class ComidasService {
     return [
       new Category(
         'Pizzas',
+        "assets/categories/pizzaCategory.avif",
         [],
         [
-          new Category('Clasicas', [
+          new Category('Clasicas', "", [
             new Product(
               1,
               'Muzzarela',
@@ -52,7 +53,7 @@ export class ComidasService {
             ),
           ]),
 
-          new Category('Tradicionales', [
+          new Category('Tradicionales', "imageUrl", [
             new Product(
               5,
               'Muzzarela con huevo',
@@ -199,7 +200,7 @@ export class ComidasService {
             ),
           ]),
 
-          new Category('Especiales', [
+          new Category('Especiales', "imageUrl", [
             new Product(
               21,
               'Jamón y morrones',
@@ -292,7 +293,8 @@ export class ComidasService {
             ),
           ]),
 
-          new Category('Exclusivas', [
+          new Category('Exclusivas', "imageUrl",[
+            
             new Product(
               31,
               'Palmitos con jamón',
@@ -467,7 +469,7 @@ export class ComidasService {
             ),
           ]),
 
-          new Category('Rellenas y calzones', [
+          new Category('Rellenas y calzones', "imageUrl", [
             new Product(
               50,
               'Fugazzeta rellena',
@@ -523,7 +525,7 @@ export class ComidasService {
               ''
             ),
           ]),
-          new Category('Otras variedades', [
+          new Category('Otras variedades', "imageUrl", [
             new Product(
               56,
               'De la casa',
@@ -573,7 +575,7 @@ export class ComidasService {
         ]),
 
 
-      new Category('Empanadas', [
+      new Category('Empanadas', "assets/categories/empanadasCategory.webp", [
         new Product(
           85,
           'Criollas',
@@ -595,7 +597,7 @@ export class ComidasService {
       ]),
 
 
-        new Category('Tostados', [
+        new Category('Tostados', "assets/categories/tostadosCategory.avif", [
           new Product(
             85,
             'Jamóm cocido',
@@ -617,7 +619,7 @@ export class ComidasService {
         ]),
 
       
-      new Category('Lomos', [
+      new Category('Lomitos', "assets/categories/lomitosCategory.avif", [
         new Product(
           85,
           'Simple',

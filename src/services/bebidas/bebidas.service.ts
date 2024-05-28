@@ -8,8 +8,8 @@ import { Category } from '../../models/category.model';
 export class BebidasService {
   getCategories(): Category[] {
     return [
-      new Category('Sin alcohol', [], [
-        new Category('Grandes', [
+      new Category('Sin alcohol', "assets/categories/sinAlcoholCategory.jpg", [], [
+        new Category('Grandes', "imageUrl", [
         new Product(
           61,
           'Coca-Cola',
@@ -119,7 +119,7 @@ export class BebidasService {
           ''
         ),
         ]),
-        new Category('Individuales', [
+        new Category('Individuales', "imageUrl", [
         new Product(
           73,
           'Coca-Cola',
@@ -232,7 +232,7 @@ export class BebidasService {
     ]),
 
 
-        new Category('Cervezas', [
+        new Category('Cervezas', "assets/categories/cervezasCategory.jpg", [
           new Product(
             29,
             'Imperial Golden',
@@ -289,7 +289,7 @@ export class BebidasService {
           ),
         ]),
 
-        new Category('Tragos', [
+        new Category('Tragos', "assets/categories/tragosCategory.webp", [
           new Product(
             33,
             'Fernet',
@@ -329,7 +329,7 @@ export class BebidasService {
         ]),
 
 
-      new Category('Vinos', [
+      new Category('Vinos', "assets/categories/vinosCategory.jpg", [
         new Product(
           33,
           'Cafayate',
