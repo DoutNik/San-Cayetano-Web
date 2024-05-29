@@ -22,6 +22,7 @@
           *ngFor="let subcategory of selectedFoodCategory.subcategories"
           (click)="onSelectFoodSubcategory(subcategory)"
         >
+        <img [src]="subcategory.imageUrl" alt="{{ subcategory.name }}" class="subcategory-image"/>
           <h2>{{ subcategory.name }}</h2>
         </div>
       </div>

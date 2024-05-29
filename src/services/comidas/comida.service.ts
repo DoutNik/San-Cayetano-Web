@@ -13,7 +13,7 @@ export class ComidasService {
         "assets/categories/pizzaCategory.avif",
         [],
         [
-          new Category('Clasicas', "", [
+          new Category('Clasicas', "assets/subcategories/pizzas/clasicasSubcategory.avif", [
             new Product(
               1,
               'Muzzarela',
@@ -53,7 +53,7 @@ export class ComidasService {
             ),
           ]),
 
-          new Category('Tradicionales', "imageUrl", [
+          new Category('Tradicionales', "assets/subcategories/pizzas/tradicionalesSubcategory.jpg", [
             new Product(
               5,
               'Muzzarela con huevo',
@@ -200,7 +200,7 @@ export class ComidasService {
             ),
           ]),
 
-          new Category('Especiales', "imageUrl", [
+          new Category('Especiales', "assets/subcategories/pizzas/especialesSubcategory.jpg", [
             new Product(
               21,
               'Jamón y morrones',
@@ -293,7 +293,7 @@ export class ComidasService {
             ),
           ]),
 
-          new Category('Exclusivas', "imageUrl",[
+          new Category('Exclusivas', "assets/subcategories/pizzas/exclusivasSubcategory.jpg",[
             
             new Product(
               31,
@@ -469,7 +469,7 @@ export class ComidasService {
             ),
           ]),
 
-          new Category('Rellenas y calzones', "imageUrl", [
+          new Category('Rellenas y calzones', "assets/subcategories/pizzas/calzoneSubcategory.webp", [
             new Product(
               50,
               'Fugazzeta rellena',
@@ -525,7 +525,7 @@ export class ComidasService {
               ''
             ),
           ]),
-          new Category('Otras variedades', "imageUrl", [
+          new Category('Otras variedades', "assets/subcategories/pizzas/otrasSubcategory.jpg", [
             new Product(
               56,
               'De la casa',
