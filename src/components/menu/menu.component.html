@@ -1,3 +1,8 @@
+<img
+class="background"
+src="../assets/fondoMenu.jpg"
+alt="background pizzas"
+/>
 <div class="menu">
   <div class="categories">
     <!---------------------------------------COMIDA---------------------------------------->
@@ -77,6 +82,7 @@
           *ngFor="let subcategory of selectedDrinkCategory.subcategories"
           (click)="onSelectDrinkSubcategory(subcategory)"
         >
+        <img [src]="subcategory.imageUrl" alt="{{ subcategory.name }}" class="subcategory-image"/>
           <h2>{{ subcategory.name }}</h2>
         </div>
       </div>

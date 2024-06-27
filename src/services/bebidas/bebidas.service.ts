@@ -9,7 +9,7 @@ export class BebidasService {
   getCategories(): Category[] {
     return [
       new Category('Sin alcohol', "assets/categories/sinAlcoholCategory.jpg", [], [
-        new Category('Grandes', "imageUrl", [
+        new Category('Grandes', "assets/subcategories/grandes.webp", [
         new Product(
           61,
           'Coca-Cola',
@@ -119,7 +119,7 @@ export class BebidasService {
           ''
         ),
         ]),
-        new Category('Individuales', "imageUrl", [
+        new Category('Individuales', "assets/subcategories/cocaIndividual.avif", [
         new Product(
           73,
           'Coca-Cola',
