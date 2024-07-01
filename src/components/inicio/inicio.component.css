@@ -16,13 +16,49 @@
   max-width: 550px;
 }
 
-.reyFaina {
+.reyFain {
   position: absolute;
   margin-top: 20%;
   width: 10%;
   left: 20%;
   height: 60%;
   rotate: 90deg;
+}
+
+.reyFaina {
+  position: absolute;
+  margin-top: -7%;
+  width: 10%;
+  left: 75%;
+  height: 60%;
+  rotate: 90deg;
+}
+
+.historia {
+  position: absolute;
+  margin-top: 30%;
+  width: 50%;
+  left: 5%;
+  height: 10%;
+}
+
+.histori {
+  position: absolute;
+  margin-top: 3%;
+  width: 50%;
+  left: 40%;
+  height: 10%;
+}
+
+.pizzeria {
+  position: absolute;
+  margin-top: 17%;
+  width: 13%;
+  left: 25%;
+  height: 8%;
+  rotate: -10deg;
+  box-shadow: rgb(255, 255, 255);
+  max-width: 200px;
 }
 
 .background {
@@ -67,6 +103,11 @@
   .logo {
     width: 45%;
     left: 8%;
+  }
+
+  .pizzeria {
+    width: 9%;
+    left: 20%;
   }
 }
 
